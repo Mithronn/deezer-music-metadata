@@ -1,3 +1,7 @@
+# deezer-music-metadata
+
+A Typescript package for scraping Deezer musics (Support Tracks, Albums, Playlists, and Share Links) also include search option
+
 # Installation
 
 ```
@@ -5,12 +9,13 @@ npm install @mithron/deezer-music-metadata
 ```
 
 # Usage
+
 ```typescript
-import {getData, Artist, Thumbnail} from "@mithron/deezer-music-metadata"
+import { getData, Artist, Thumbnail } from "@mithron/deezer-music-metadata";
 
 // Also works with share link
 // getData("https://deezer.page.link/Vky9nsABeh4m1y9r7").then(console.log)
-getData("https://www.deezer.com/us/track/916424").then(console.log)
+getData("https://www.deezer.com/us/track/916424").then(console.log);
 
 // Returns undefined if any error is encountered
 /*
@@ -48,11 +53,18 @@ getData("https://www.deezer.com/us/track/916424").then(console.log)
 ## Playlist and Album
 
 ```typescript
-import {getData, Artist, Thumbnail, Track} from "@mithron/deezer-music-metadata"
+import {
+  getData,
+  Artist,
+  Thumbnail,
+  Track,
+} from "@mithron/deezer-music-metadata";
 
 // Also works with share link
 // getData("https://deezer.page.link/x6JDXfCCawbdpwRj8").then(console.log)
-getData("https://www.deezer.com/us/playlist/1313621735?utm_campaign=clipboard-generic&utm_source=user_sharing")
+getData(
+  "https://www.deezer.com/us/playlist/1313621735?utm_campaign=clipboard-generic&utm_source=user_sharing"
+);
 
 // Returns undefined if any error is encountered
 /*
@@ -98,15 +110,20 @@ getData("https://www.deezer.com/us/playlist/1313621735?utm_campaign=clipboard-ge
 ## Search
 
 ```typescript
-import {search, SearchOptions, SearchError, SearchType} from "@mithron/deezer-music-metadata"
+import {
+  search,
+  SearchOptions,
+  SearchError,
+  SearchType,
+} from "@mithron/deezer-music-metadata";
 import { AxiosRequestConfig } from "axios";
 
 let options: SearchOptions = {
-    type: SearchType.TRACK, // @default SearchType.ALL
-    limit: 50, // @default 100
-    index: 10, // search start index @default 0
-    axiosOptions: undefined // AxiosRequestConfig | undefined @default undefined
-}
+  type: SearchType.TRACK, // @default SearchType.ALL
+  limit: 50, // @default 100
+  index: 10, // search start index @default 0
+  axiosOptions: undefined, // AxiosRequestConfig | undefined @default undefined
+};
 
 search("eminem", options).then(console.log);
 

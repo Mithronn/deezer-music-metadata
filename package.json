@@ -1,7 +1,7 @@
 {
   "name": "@mithron/deezer-music-metadata",
   "version": "1.0.0",
-  "description": "A Typescript package for scraping Deezer musics (Support Track, Album, Playlist and Share Links) also include search option",
+  "description": "A Typescript package for scraping Deezer musics (Support Tracks, Albums, Playlists, and Share Links) also include search option",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
   "scripts": {
