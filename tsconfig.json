@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "target": "ESNEXT",
+        "module": "CommonJS",
+        "declaration": true,
+        "rootDir": "src",
+        "outDir": "build",
+        "strict": true,
+        "strictNullChecks": true,
+        "noUncheckedIndexedAccess": true,
+        "esModuleInterop": true,
+        "pretty": true,
+        "skipLibCheck": false,
+        "resolveJsonModule": true,
+        "noImplicitAny": true,
+        "sourceMap": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "Node"
+    },
+    "exclude": [
+        "node_modules",
+        "build",
+        "tests"
+    ]
+}
