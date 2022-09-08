@@ -62,7 +62,7 @@ export interface Playlist {
     artist: Artist;
     description: string;
     thumbnail: Thumbnail[];
-    type: Type;
+    type: "playlist" | "album";
 }
 
 export interface Thumbnail {
